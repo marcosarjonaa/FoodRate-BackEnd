@@ -1,0 +1,40 @@
+En este fichero voy a poner los errores y procesos de aprendizaje que he tenido durante
+el proceso de hacer este backend:
+
+Data:
+    Recetas:
+        -> Persistence:
+                . models:
+                    * RecetaDao: fue un error que solventé rapido, pero ponía igual en vez de by
+                Repository:
+                    * PersistenceRecetasRepository:
+                        -> Aquí estuve liado bastante tiempo porque no entendía un fallo
+                           que resultó ser una gilipollez, un mal import que no se detectaba
+                           como tal, me amargo un tiempecillo. No caí en que era un mal import,
+                           ya que me daba un fallo de tipado.
+
+                        -> Otros de los fallos que tuve fue que no caí bien en poner el
+                           limit(1).map{ it.toRecetas}.firstOrNull() . No tardé en conseguir
+                           solventar esta tontería.
+    Usuario:
+        -> Persistence:
+                . Repository:
+                    * PersistenceUsuarioRepository:
+                        -> Tuve casi los mismos fallos que en recetas pero solo los del
+                           limit y demás.
+
+        -> Security:
+                * HashPassword:
+                    Este método me costó hacerlo, me costó entender la función hash
+                    no conseguí entenderla rápidamente. Lo que más me costó entender
+                    fue el porqué pasarla a un array de bit pasarlas hashearlas y
+                    después volver a unirlo según formato
+
+Domain:
+    Recetas:
+        -> En este directorio: no tuve prácticamente problemas, no tuve una complicación
+        demasiado grande con el mapping, ya que entendí bien que necesitaba hacer con cada función
+    Usuario:
+        -> Security:
+                -> Para el jwt me encontré con problemas de entendimiento con el funcionamiento pero
+                no me costó demasiado
