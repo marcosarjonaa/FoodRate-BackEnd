@@ -79,7 +79,6 @@ object ProviderUseCase {
 
         return if(
             usuario.dni.isNullOrBlank() ||
-            usuario.name.isNullOrBlank() ||
             usuario.password.isNullOrBlank()
         )
             null

@@ -24,8 +24,8 @@ fun Route.recetasRouting(){
                     call.respond(HttpStatusCode.Unauthorized, "El token ha fallado")
                     return@get
                 }
-                var recetas = RecetasProviderUseCase.getAllRecetas()
-                call.respond(recetas.invoke())
+                var listRecetas = RecetasProviderUseCase.getAllRecetas()
+                call.respond(listRecetas.invoke())
             }
 
             delete("{idReceta}") {
