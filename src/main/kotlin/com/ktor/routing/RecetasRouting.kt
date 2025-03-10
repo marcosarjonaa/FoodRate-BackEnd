@@ -105,7 +105,7 @@ fun Route.recetasRouting(){
                     idReceta?.let{
                         val updateReceta = call.receive<UpdateRecetas>()
                         val res = RecetasProviderUseCase.updateRecetas(idReceta.toInt(), updateReceta)
-                        if (! res){
+                        if (res==null){
                             call.respond(HttpStatusCode.Conflict, "Algo ha fallado al modificar")
                             return@patch
                         }

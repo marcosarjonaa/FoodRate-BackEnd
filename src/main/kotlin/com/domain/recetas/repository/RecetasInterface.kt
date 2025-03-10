@@ -15,9 +15,9 @@ interface RecetasInterface {
 
     suspend fun getRecetasById (idReceta: Int) : Recetas?
 
-    suspend fun postRecetas(Recetas: Recetas) : Boolean
+    suspend fun postRecetas(Recetas: Recetas) : Recetas?
 
-    suspend fun updateRecetas(Recetas: UpdateRecetas, idReceta: Int) : Boolean
+    suspend fun updateRecetas(Recetas: UpdateRecetas, idReceta: Int) : Recetas
 
     suspend fun deleteRecetas(idReceta : Int) : Boolean
 }

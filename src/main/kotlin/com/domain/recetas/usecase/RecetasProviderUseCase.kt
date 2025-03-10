@@ -57,7 +57,7 @@ object RecetasProviderUseCase {
         }
         postRecetasUseCase.receta= receta
         var respuesta = postRecetasUseCase()
-        return if (!respuesta){
+        return if (respuesta == null){
             logger.warn("No se ha podido insertar")
             null
         } else {
@@ -65,14 +65,14 @@ object RecetasProviderUseCase {
         }
     }
 
-    suspend fun updateRecetas(idRecetas: Int, updateRecetas: UpdateRecetas?): Boolean{
+    suspend fun updateRecetas(idRecetas: Int, updateRecetas: UpdateRecetas?): Recetas?{
         if (updateRecetas == null){
             logger.warn("No hay datos en esa receta")
-            return false
+            return null
         }
 
         updateRecetasUseCase.idReceta = idRecetas
-        updateRecetasUseCase.receta= updateRecetas
+        updateRecetasUseCase.updateReceta= updateRecetas
         return updateRecetasUseCase()
     }
 

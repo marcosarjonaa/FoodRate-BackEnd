@@ -6,6 +6,6 @@ data class Recetas(
     val idRecetas : Int,
     val name : String,
     val description: String,
-    val image: String,
+    var image: String,
     val nota: String
 )

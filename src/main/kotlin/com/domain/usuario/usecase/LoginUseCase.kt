@@ -12,7 +12,7 @@ class LoginUseCase (val repository : UsuarioInterface){
            return null
         else {
             return try{
-                val usu = repository.login(dni, password)
+                val usu = repository.login(dni, password) ?: null
                 usu!!.token = JwtConfiguracion.generarToken(usu.dni)
                 val updateUsuario = usu.toUpdateUsuario()
                 var respuesta = repository.updateUsuario(updateUsuario, dni)

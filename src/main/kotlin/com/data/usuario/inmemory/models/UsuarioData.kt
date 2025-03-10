@@ -41,29 +41,29 @@ object UsuarioData {
         ),
         Usuario(
             "65983214C",
-            "josehernandez@gmail.com",
             "jose",
+            "josehernandez@gmail.com",
             "jose",
             ""
         ),
         Usuario(
             "42753698S",
-            "hugogarcia@gmail.com",
             "hugo",
+            "hugogarcia@gmail.com",
             "hugo",
             ""
         ),
         Usuario(
             "98412653J",
-            "carloscomino@gmail.com",
             "carlos",
+            "carloscomino@gmail.com",
             "carlos",
             ""
         ),
         Usuario(
             "36251482U",
-            "ismaelfernandez@gmail.com",
             "ismael",
+            "ismaelfernandez@gmail.com",
             "ismael",
             ""
         )
